@@ -17,7 +17,7 @@ namespace Task_1
 
         private Random rnd = new Random();
 
-        public Gold(int x, int y, TileType tile_type, char symbol) : base(x, y, tile_type, symbol)
+        public Gold(int x, int y, TileType tile_type) : base(x, y, tile_type, '$')
         {
             amount = rnd.Next(1,6);
         }

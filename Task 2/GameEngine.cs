@@ -16,20 +16,20 @@ namespace Task_1
        
        public  GameEngine()
         {
-            game_map = new Map(10, 10, 15, 15, 3);
+            game_map = new Map(10, 10, 15, 15, 6,5);
         }
 
-        public bool MovePlayer(movementEnum movement)
-        {
-            if(game_map.GetPlayer.ReturnMove(movement) == movement)
-            {
-                //game_map.Create(TileType.Empty, game_map.GetPlayer.getX, game_map.GetPlayer.getY);
-                //game_map.GetPlayer.Move(movement);
-                //game_map.GetMaps[game_map.GetPlayer.getX, game_map.GetPlayer.getY] = game_map.GetPlayer;
-                return true;
-            }
-            return false;
-        }
+        //public bool MovePlayer(movementEnum movement)
+        //{
+        //    if(game_map.GetPlayer.ReturnMove(movement) == movement)
+        //    {
+        //        game_map.Create(TileType.Empty, game_map.GetPlayer.getX, game_map.GetPlayer.getY);
+        //        game_map.GetPlayer.Move(movement);
+        //        game_map.GetMaps[game_map.GetPlayer.getX, game_map.GetPlayer.getY] = game_map.GetPlayer;
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
         public string PlayerAttack(int Enemy)
         {

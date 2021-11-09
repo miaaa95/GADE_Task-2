@@ -51,7 +51,7 @@ namespace Task_1
             this.bttnUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bttnUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(60)))), ((int)(((byte)(36)))));
-            this.bttnUp.Location = new System.Drawing.Point(535, 362);
+            this.bttnUp.Location = new System.Drawing.Point(535, 384);
             this.bttnUp.Name = "bttnUp";
             this.bttnUp.Size = new System.Drawing.Size(69, 48);
             this.bttnUp.TabIndex = 0;
@@ -65,7 +65,7 @@ namespace Task_1
             this.bttnRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnRight.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bttnRight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(60)))), ((int)(((byte)(36)))));
-            this.bttnRight.Location = new System.Drawing.Point(612, 420);
+            this.bttnRight.Location = new System.Drawing.Point(609, 433);
             this.bttnRight.Name = "bttnRight";
             this.bttnRight.Size = new System.Drawing.Size(69, 48);
             this.bttnRight.TabIndex = 1;
@@ -79,7 +79,7 @@ namespace Task_1
             this.bttnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnDown.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bttnDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(60)))), ((int)(((byte)(36)))));
-            this.bttnDown.Location = new System.Drawing.Point(535, 478);
+            this.bttnDown.Location = new System.Drawing.Point(535, 497);
             this.bttnDown.Name = "bttnDown";
             this.bttnDown.Size = new System.Drawing.Size(69, 48);
             this.bttnDown.TabIndex = 2;
@@ -93,7 +93,7 @@ namespace Task_1
             this.bttnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnLeft.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bttnLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(60)))), ((int)(((byte)(36)))));
-            this.bttnLeft.Location = new System.Drawing.Point(457, 420);
+            this.bttnLeft.Location = new System.Drawing.Point(456, 433);
             this.bttnLeft.Name = "bttnLeft";
             this.bttnLeft.Size = new System.Drawing.Size(69, 48);
             this.bttnLeft.TabIndex = 3;
@@ -108,7 +108,7 @@ namespace Task_1
             this.grpBxStats.Controls.Add(this.grpBxAttack);
             this.grpBxStats.Location = new System.Drawing.Point(399, 12);
             this.grpBxStats.Name = "grpBxStats";
-            this.grpBxStats.Size = new System.Drawing.Size(324, 344);
+            this.grpBxStats.Size = new System.Drawing.Size(329, 366);
             this.grpBxStats.TabIndex = 4;
             this.grpBxStats.TabStop = false;
             this.grpBxStats.Text = "Stats";
@@ -118,7 +118,7 @@ namespace Task_1
             this.rchTxtStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
             this.rchTxtStats.Location = new System.Drawing.Point(12, 27);
             this.rchTxtStats.Name = "rchTxtStats";
-            this.rchTxtStats.Size = new System.Drawing.Size(300, 65);
+            this.rchTxtStats.Size = new System.Drawing.Size(300, 89);
             this.rchTxtStats.TabIndex = 1;
             this.rchTxtStats.Text = "";
             // 
@@ -128,7 +128,7 @@ namespace Task_1
             this.grpBxAttack.Controls.Add(this.rchtTxtBxLog);
             this.grpBxAttack.Controls.Add(this.rchTxtBxEnemyStats);
             this.grpBxAttack.Controls.Add(this.drpDwnEnemy);
-            this.grpBxAttack.Location = new System.Drawing.Point(6, 92);
+            this.grpBxAttack.Location = new System.Drawing.Point(6, 114);
             this.grpBxAttack.Name = "grpBxAttack";
             this.grpBxAttack.Size = new System.Drawing.Size(312, 246);
             this.grpBxAttack.TabIndex = 0;

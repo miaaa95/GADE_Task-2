@@ -9,7 +9,6 @@ namespace Task_1
         Hero,
         Enemy,
         Gold,
-        Weapon,
         Barrier,
         Empty
     }

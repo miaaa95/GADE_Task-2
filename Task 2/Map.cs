@@ -28,6 +28,12 @@ namespace Task_1
             set { enemies = value; }
         }
 
+        private Item [] items;
+        public  Item [] GetItems
+        {
+            get { return items; }
+            set { items = value; }
+        }
         private int mapwidth;
 
         public int getmapwidth
@@ -45,7 +51,7 @@ namespace Task_1
         }
         private Random rnd = new Random();
 
-        public Map(int min_width,int max_width, int min_height, int max_height,int num_enemies)
+        public Map(int min_width,int max_width, int min_height, int max_height,int num_enemies,int num_items)
         {
             mapwidth = rnd.Next(min_width, max_width+1);
             mapheight = rnd.Next(min_height, max_height+1);
@@ -53,6 +59,7 @@ namespace Task_1
             map = new Tile[mapwidth, mapheight];
 
             enemies = new Enemy[num_enemies];
+            items = new Item[num_items];
 
             generate_map();
 
@@ -63,6 +70,11 @@ namespace Task_1
             {
                 enemies[i] = (Enemy)Create(TileType.Enemy);
                 map[enemies[i].getX, enemies[i].getY] = enemies[i];
+            }
+            for (int z = 0; z < items.Length; z++)
+            {
+                items[z] = (Item)Create(TileType.Gold);
+                map[items[z].getX, items[z].getY] = items[z];
             }
             UpdateVision();
         }
@@ -110,11 +122,12 @@ namespace Task_1
         
        private Tile Create(TileType tileType,int x = 0, int y = 0)
         {
+
             switch (tileType)
             {
                 case TileType.Hero:
-                    int HeroX = rnd.Next(0, mapwidth-1);
-                    int HeroY = rnd.Next(0, mapheight-1);
+                    int HeroX = rnd.Next(0, mapwidth);
+                    int HeroY = rnd.Next(0, mapheight);
                     while( map[HeroX,HeroY].GetType() != typeof(EmptyTile))
                     {
                          HeroX = rnd.Next(0, mapwidth);
@@ -123,6 +136,7 @@ namespace Task_1
                     return new Hero(HeroX, HeroY, tileType);
 
                 case TileType.Enemy:
+                    int determine_enemy = rnd.Next(0,2);
                     int EnemyX = rnd.Next(0, mapwidth);
                     int EnemyY = rnd.Next(0, mapheight);
 
@@ -131,7 +145,27 @@ namespace Task_1
                         EnemyX = rnd.Next(0, mapwidth);
                         EnemyY = rnd.Next(0, mapheight);
                     }
-                    return new Goblin(EnemyX, EnemyY, tileType);
+                    if(determine_enemy == 0)
+                    {
+                        return new Goblin(EnemyX, EnemyY, tileType);
+                    }
+                    else
+                    {
+                        return new Mage(EnemyX, EnemyY, tileType);
+                    }
+                    
+
+                case TileType.Gold:
+                    int ItemX = rnd.Next(0, mapwidth);
+                    int ItemY = rnd.Next(0, mapheight);
+
+                    while (map[ItemX, ItemY].GetType() != typeof(EmptyTile))
+                    {
+                        ItemX = rnd.Next(0, mapwidth);
+                        ItemY = rnd.Next(0, mapheight);
+                    }
+                    return new Gold(ItemX, ItemY, tileType);
+
                 default:
                     return null;
             }
