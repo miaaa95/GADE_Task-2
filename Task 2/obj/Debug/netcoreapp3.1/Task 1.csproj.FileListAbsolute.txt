@@ -28,3 +28,19 @@ C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreap
 C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task 1.dll
 C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task 1.pdb
 C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task 1.genruntimeconfig.cache
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\obj\Debug\netcoreapp3.1\Task 1.csprojAssemblyReference.cache
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\obj\Debug\netcoreapp3.1\Task_1.frmUI.resources
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\obj\Debug\netcoreapp3.1\Task_1.Properties.Resources.resources
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\obj\Debug\netcoreapp3.1\Task 1.csproj.GenerateResource.cache
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\obj\Debug\netcoreapp3.1\Task 1.AssemblyInfoInputs.cache
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\obj\Debug\netcoreapp3.1\Task 1.AssemblyInfo.cs
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\obj\Debug\netcoreapp3.1\Task 1.csproj.CoreCompileInputs.cache
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\obj\Debug\netcoreapp3.1\Task 1.dll
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\obj\Debug\netcoreapp3.1\Task 1.pdb
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\bin\Debug\netcoreapp3.1\Task 1.exe
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\bin\Debug\netcoreapp3.1\Task 1.deps.json
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\bin\Debug\netcoreapp3.1\Task 1.runtimeconfig.json
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\bin\Debug\netcoreapp3.1\Task 1.runtimeconfig.dev.json
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\bin\Debug\netcoreapp3.1\Task 1.dll
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\bin\Debug\netcoreapp3.1\Task 1.pdb
+C:\Users\Olwethu\Documents\GitHub\GADS_Task-2\Task 2\obj\Debug\netcoreapp3.1\Task 1.genruntimeconfig.cache

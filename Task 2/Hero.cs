@@ -6,7 +6,7 @@ namespace Task_1
 {
     class Hero: Character
     {
-        public Hero(int x, int y,TileType tile_type) :base(x, y, tile_type, 'H', 2, 10, 10)
+        public Hero(int x, int y,TileType tile_type) :base(x, y, tile_type, 'H', 10, 10, 2)
         {
 
         }
@@ -60,7 +60,7 @@ namespace Task_1
 
         public override string ToString()
         {
-            return "Player Stats:" + '\n' + "HP:" + HP + "/Max HP: "+ MaxHP+ '\n' + "Damage:" + Damage + '\n' + "[" + X + "," + Y + "]";
+            return "Player Stats:" + '\n' + "HP: " + HP + "/ "+ MaxHP+ '\n' + "Damage: " + Damage + '\n' + "[" + X + "," + Y + "]";
         }
     }
 }

@@ -24,8 +24,8 @@ namespace Task_1
 
         private void PlayerUI_Load(object sender, EventArgs e)
         {
-            label1.Text = game.ToString();
-            label2.Text = game.GetMap.GetPlayer.ToString();
+            lblMap.Text = game.ToString();
+            rchTxtStats.Text = game.GetMap.GetPlayer.ToString();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -35,7 +35,34 @@ namespace Task_1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            game.GetMap.GetPlayer.Move(game.GetMap.GetPlayer.ReturnMove(movementEnum.Up));
+            game.GetMap.updatemap();
+            lblMap.Text = game.ToString();
+            rchTxtStats.Text = game.GetMap.GetPlayer.ToString();
+        }
 
+        private void bttnDown_Click(object sender, EventArgs e)
+        {
+            game.GetMap.GetPlayer.Move(game.GetMap.GetPlayer.ReturnMove(movementEnum.Down));
+            game.GetMap.updatemap();
+            lblMap.Text = game.ToString();
+            rchTxtStats.Text = game.GetMap.GetPlayer.ToString();
+        }
+
+        private void bttnRight_Click(object sender, EventArgs e)
+        {
+            game.GetMap.GetPlayer.Move(game.GetMap.GetPlayer.ReturnMove(movementEnum.Right));
+            game.GetMap.updatemap();
+            lblMap.Text = game.ToString();
+            rchTxtStats.Text = game.GetMap.GetPlayer.ToString();
+        }
+
+        private void bttnLeft_Click(object sender, EventArgs e)
+        {
+            game.GetMap.GetPlayer.Move(game.GetMap.GetPlayer.ReturnMove(movementEnum.Left));
+            game.GetMap.updatemap();
+            lblMap.Text = game.ToString();
+            rchTxtStats.Text = game.GetMap.GetPlayer.ToString();
         }
     }
 }

@@ -34,12 +34,12 @@ namespace Task_1
             this.bttnDown = new System.Windows.Forms.Button();
             this.bttnLeft = new System.Windows.Forms.Button();
             this.grpBxStats = new System.Windows.Forms.GroupBox();
+            this.rchTxtStats = new System.Windows.Forms.RichTextBox();
             this.grpBxAttack = new System.Windows.Forms.GroupBox();
-            this.drpDwnEnemy = new System.Windows.Forms.DomainUpDown();
-            this.rchTxtBxEnemyStats = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.rchtTxtBxLog = new System.Windows.Forms.RichTextBox();
             this.bttnAttack = new System.Windows.Forms.Button();
+            this.rchtTxtBxLog = new System.Windows.Forms.RichTextBox();
+            this.rchTxtBxEnemyStats = new System.Windows.Forms.RichTextBox();
+            this.drpDwnEnemy = new System.Windows.Forms.DomainUpDown();
             this.lblMap = new System.Windows.Forms.Label();
             this.grpBxStats.SuspendLayout();
             this.grpBxAttack.SuspendLayout();
@@ -49,7 +49,7 @@ namespace Task_1
             // 
             this.bttnUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(160)))), ((int)(((byte)(120)))));
             this.bttnUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnUp.Font = new System.Drawing.Font("Simple Outline Pat", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bttnUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(60)))), ((int)(((byte)(36)))));
             this.bttnUp.Location = new System.Drawing.Point(535, 362);
             this.bttnUp.Name = "bttnUp";
@@ -71,6 +71,7 @@ namespace Task_1
             this.bttnRight.TabIndex = 1;
             this.bttnRight.Text = ">";
             this.bttnRight.UseVisualStyleBackColor = false;
+            this.bttnRight.Click += new System.EventHandler(this.bttnRight_Click);
             // 
             // bttnDown
             // 
@@ -84,6 +85,7 @@ namespace Task_1
             this.bttnDown.TabIndex = 2;
             this.bttnDown.Text = "V";
             this.bttnDown.UseVisualStyleBackColor = false;
+            this.bttnDown.Click += new System.EventHandler(this.bttnDown_Click);
             // 
             // bttnLeft
             // 
@@ -97,11 +99,12 @@ namespace Task_1
             this.bttnLeft.TabIndex = 3;
             this.bttnLeft.Text = "<";
             this.bttnLeft.UseVisualStyleBackColor = false;
+            this.bttnLeft.Click += new System.EventHandler(this.bttnLeft_Click);
             // 
             // grpBxStats
             // 
             this.grpBxStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(180)))), ((int)(((byte)(128)))));
-            this.grpBxStats.Controls.Add(this.richTextBox2);
+            this.grpBxStats.Controls.Add(this.rchTxtStats);
             this.grpBxStats.Controls.Add(this.grpBxAttack);
             this.grpBxStats.Location = new System.Drawing.Point(399, 12);
             this.grpBxStats.Name = "grpBxStats";
@@ -109,6 +112,15 @@ namespace Task_1
             this.grpBxStats.TabIndex = 4;
             this.grpBxStats.TabStop = false;
             this.grpBxStats.Text = "Stats";
+            // 
+            // rchTxtStats
+            // 
+            this.rchTxtStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
+            this.rchTxtStats.Location = new System.Drawing.Point(12, 27);
+            this.rchTxtStats.Name = "rchTxtStats";
+            this.rchTxtStats.Size = new System.Drawing.Size(300, 65);
+            this.rchTxtStats.TabIndex = 1;
+            this.rchTxtStats.Text = "";
             // 
             // grpBxAttack
             // 
@@ -123,42 +135,6 @@ namespace Task_1
             this.grpBxAttack.TabStop = false;
             this.grpBxAttack.Text = "Attack";
             // 
-            // drpDwnEnemy
-            // 
-            this.drpDwnEnemy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
-            this.drpDwnEnemy.Location = new System.Drawing.Point(6, 26);
-            this.drpDwnEnemy.Name = "drpDwnEnemy";
-            this.drpDwnEnemy.Size = new System.Drawing.Size(296, 27);
-            this.drpDwnEnemy.TabIndex = 1;
-            this.drpDwnEnemy.Text = "Goblin";
-            // 
-            // rchTxtBxEnemyStats
-            // 
-            this.rchTxtBxEnemyStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
-            this.rchTxtBxEnemyStats.Location = new System.Drawing.Point(6, 59);
-            this.rchTxtBxEnemyStats.Name = "rchTxtBxEnemyStats";
-            this.rchTxtBxEnemyStats.Size = new System.Drawing.Size(300, 64);
-            this.rchTxtBxEnemyStats.TabIndex = 2;
-            this.rchTxtBxEnemyStats.Text = "";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
-            this.richTextBox2.Location = new System.Drawing.Point(12, 27);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(300, 59);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "";
-            // 
-            // rchtTxtBxLog
-            // 
-            this.rchtTxtBxLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
-            this.rchtTxtBxLog.Location = new System.Drawing.Point(6, 164);
-            this.rchtTxtBxLog.Name = "rchtTxtBxLog";
-            this.rchtTxtBxLog.Size = new System.Drawing.Size(300, 76);
-            this.rchtTxtBxLog.TabIndex = 3;
-            this.rchtTxtBxLog.Text = "";
-            // 
             // bttnAttack
             // 
             this.bttnAttack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(97)))), ((int)(((byte)(52)))));
@@ -171,14 +147,41 @@ namespace Task_1
             this.bttnAttack.Text = "ATTACK";
             this.bttnAttack.UseVisualStyleBackColor = false;
             // 
+            // rchtTxtBxLog
+            // 
+            this.rchtTxtBxLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
+            this.rchtTxtBxLog.Location = new System.Drawing.Point(6, 164);
+            this.rchtTxtBxLog.Name = "rchtTxtBxLog";
+            this.rchtTxtBxLog.Size = new System.Drawing.Size(300, 76);
+            this.rchtTxtBxLog.TabIndex = 3;
+            this.rchtTxtBxLog.Text = "";
+            // 
+            // rchTxtBxEnemyStats
+            // 
+            this.rchTxtBxEnemyStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
+            this.rchTxtBxEnemyStats.Location = new System.Drawing.Point(6, 59);
+            this.rchTxtBxEnemyStats.Name = "rchTxtBxEnemyStats";
+            this.rchTxtBxEnemyStats.Size = new System.Drawing.Size(300, 64);
+            this.rchTxtBxEnemyStats.TabIndex = 2;
+            this.rchTxtBxEnemyStats.Text = "";
+            // 
+            // drpDwnEnemy
+            // 
+            this.drpDwnEnemy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
+            this.drpDwnEnemy.Location = new System.Drawing.Point(6, 26);
+            this.drpDwnEnemy.Name = "drpDwnEnemy";
+            this.drpDwnEnemy.Size = new System.Drawing.Size(296, 27);
+            this.drpDwnEnemy.TabIndex = 1;
+            this.drpDwnEnemy.Text = "Goblin";
+            // 
             // lblMap
             // 
             this.lblMap.AutoSize = true;
             this.lblMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(180)))), ((int)(((byte)(128)))));
-            this.lblMap.Font = new System.Drawing.Font("Verdana", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMap.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblMap.Location = new System.Drawing.Point(44, 39);
             this.lblMap.Name = "lblMap";
-            this.lblMap.Size = new System.Drawing.Size(270, 45);
+            this.lblMap.Size = new System.Drawing.Size(152, 25);
             this.lblMap.TabIndex = 5;
             this.lblMap.Text = "XXXXXXXXXX";
             // 
@@ -187,7 +190,7 @@ namespace Task_1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Task_1.Properties.Resources.Background2;
-            this.ClientSize = new System.Drawing.Size(772, 538);
+            this.ClientSize = new System.Drawing.Size(992, 548);
             this.Controls.Add(this.lblMap);
             this.Controls.Add(this.grpBxStats);
             this.Controls.Add(this.bttnLeft);
@@ -211,7 +214,7 @@ namespace Task_1
         private System.Windows.Forms.Button bttnDown;
         private System.Windows.Forms.Button bttnLeft;
         private System.Windows.Forms.GroupBox grpBxStats;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rchTxtStats;
         private System.Windows.Forms.GroupBox grpBxAttack;
         private System.Windows.Forms.Button bttnAttack;
         private System.Windows.Forms.RichTextBox rchtTxtBxLog;
