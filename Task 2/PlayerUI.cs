@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Task_1
 {
-    public partial class PlayerUI : Form
+    public partial class frmUI : Form
     {
-        public PlayerUI()
+        public frmUI()
         {
             InitializeComponent();
         }
@@ -26,6 +26,16 @@ namespace Task_1
         {
             label1.Text = game.ToString();
             label2.Text = game.GetMap.GetPlayer.ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

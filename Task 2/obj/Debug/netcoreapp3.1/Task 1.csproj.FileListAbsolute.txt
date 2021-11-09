@@ -13,3 +13,18 @@ D:\we work here\GADS_Task-2\Task 1\obj\Debug\netcoreapp3.1\Task 1.dll
 D:\we work here\GADS_Task-2\Task 1\obj\Debug\netcoreapp3.1\Task 1.pdb
 D:\we work here\GADS_Task-2\Task 1\obj\Debug\netcoreapp3.1\Task 1.genruntimeconfig.cache
 D:\we work here\GADS_Task-2\Task 1\obj\Debug\netcoreapp3.1\Task_1.PlayerUI.resources
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\bin\Debug\netcoreapp3.1\Task 1.exe
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\bin\Debug\netcoreapp3.1\Task 1.deps.json
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\bin\Debug\netcoreapp3.1\Task 1.runtimeconfig.json
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\bin\Debug\netcoreapp3.1\Task 1.runtimeconfig.dev.json
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\bin\Debug\netcoreapp3.1\Task 1.dll
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\bin\Debug\netcoreapp3.1\Task 1.pdb
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task 1.csprojAssemblyReference.cache
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task_1.PlayerUI.resources
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task 1.csproj.GenerateResource.cache
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task 1.AssemblyInfoInputs.cache
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task 1.AssemblyInfo.cs
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task 1.csproj.CoreCompileInputs.cache
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task 1.dll
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task 1.pdb
+C:\School work\1 UNIVERSITY\2nd Semester\GADE\correct\Task 2\obj\Debug\netcoreapp3.1\Task 1.genruntimeconfig.cache

@@ -16,7 +16,7 @@ namespace Task_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PlayerUI());
+            Application.Run(new frmUI());
         }
     }
 }
