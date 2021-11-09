@@ -8,9 +8,9 @@ namespace Task_1
     class Obstacle : Tile
     {
         //constructor for obstacle class also inherites the tile constructor
-        public Obstacle(int x,int y, TileType tile_type, char symbol) : base(x, y, tile_type, symbol)
+        public Obstacle(int x, int y, TileType tile_type) : base(x, y, tile_type, 'X')
         {
-            
+
         }
     }
 }

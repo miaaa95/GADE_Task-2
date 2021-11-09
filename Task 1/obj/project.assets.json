@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Olwethu\\source\\repos\\Task 1\\Task 1.csproj",
+      "projectUniqueName": "C:\\Users\\Olwethu\\Documents\\GitHub\\GADS_Task-2\\Task 1\\Task 1.csproj",
       "projectName": "Task 1",
-      "projectPath": "C:\\Users\\Olwethu\\source\\repos\\Task 1\\Task 1.csproj",
+      "projectPath": "C:\\Users\\Olwethu\\Documents\\GitHub\\GADS_Task-2\\Task 1\\Task 1.csproj",
       "packagesPath": "C:\\Users\\Olwethu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Olwethu\\source\\repos\\Task 1\\obj\\",
+      "outputPath": "C:\\Users\\Olwethu\\Documents\\GitHub\\GADS_Task-2\\Task 1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

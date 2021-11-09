@@ -8,7 +8,7 @@ namespace Task_1
     {
         protected Random rnd = new Random();
 
-        public  Enemy(int x, int y,TileType tile_type, char symbol, int dmg, int EnemyHP,int MaxEnemyHP) : base(x, y, tile_type, symbol,dmg, EnemyHP, MaxEnemyHP)
+        public Enemy(int x, int y, TileType tile_type, char symbol, int dmg, int EnemyHP, int MaxEnemyHP) : base(x, y, tile_type, symbol, dmg, EnemyHP, MaxEnemyHP)
         {
             Damage = dmg;
             MaxHP = MaxEnemyHP;
@@ -17,7 +17,7 @@ namespace Task_1
 
         public override string ToString()
         {
-            string output = GetType().Name+'\n'+ "at["+ X + Y+"] \n"+ HP+" HP \n"+"{"+ Damage+"}";
+            string output = GetType().Name + '\n' + "at[" + X + Y + "] \n" + HP + " HP \n" + "{" + Damage + "}";
             return output;
         }
     }

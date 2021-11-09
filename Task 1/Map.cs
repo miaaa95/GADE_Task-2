@@ -20,9 +20,9 @@ namespace Task_1
             set { Player = value; }
         }
 
-        private List<Enemy> enemies;
+        private Enemy[] enemies;
 
-        private List<Enemy> GetEnemies
+        public Enemy[] GetEnemies
         {
             get { return enemies; }
             set { enemies = value; }
@@ -45,65 +45,83 @@ namespace Task_1
         }
         private Random rnd = new Random();
 
-        public Map(int min_width,int max_width, int min_height, int max_height,int num_enemies)
+        public Map(int min_width, int max_width, int min_height, int max_height, int num_enemies)
         {
-            mapwidth = rnd.Next(min_width, max_width);
-            mapheight = rnd.Next(min_height, max_height);
+            mapwidth = rnd.Next(min_width, max_width + 1);
+            mapheight = rnd.Next(min_height, max_height + 1);
+
             map = new Tile[mapwidth, mapheight];
-            enemies = new List<Enemy>();
-            
-            generate_map(num_enemies);
+
+            enemies = new Enemy[num_enemies];
+
+            generate_map();
+
+            Player = (Hero)Create(TileType.Hero);
+            map[Player.getX, Player.getY] = Player;
+
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                enemies[i] = (Enemy)Create(TileType.Enemy);
+                map[enemies[i].getX, enemies[i].getY] = enemies[i];
+            }
             UpdateVision();
         }
-        private void generate_map(int num)
+
+
+        public void updatemap()
         {
-            for (int y = 0; y < mapwidth; y++)
+            generate_map();
+            map[Player.getX, Player.getY] = Player;
+            for (int i = 0; i < enemies.Length; i++)
             {
-                for (int x = 0; x < mapheight; x++)
+                map[enemies[i].getX, enemies[i].getY] = enemies[i];
+            }
+            UpdateVision();
+        }
+        void generate_map()
+        {
+            create_tiles();
+            create_borders();
+        }
+        private void create_borders()
+        {
+            for (int y = 0; y < map.GetLength(1); y++)
+            {
+                for (int x = 0; x < map.GetLength(0); x++)
                 {
-                    if(x == 0|| x == mapwidth - 1|| y == 0 || y == mapheight - 1)
+                    if ((y == 0 || y == map.GetLength(1) - 1) || x == 0 || (x == map.GetLength(0) - 1))
                     {
-                        Create(TileType.Barrier, x, y);
-                    }
-                    else
-                    {
-                        Create(TileType.Empty, x, y);
+                        map[x, y] = new Obstacle(x, y, TileType.Barrier);
                     }
                 }
             }
-            Create(TileType.Hero);
-            for (int i = 0; i < num; i++)
+        }
+
+        private void create_tiles()
+        {
+            for (int y = 0; y < map.GetLength(1); y++)
             {
-                Create(TileType.Enemy);
+                for (int x = 0; x < map.GetLength(0); x++)
+                {
+                    map[x, y] = new EmptyTile(x, y, TileType.Empty);
+                }
             }
         }
 
-        public void Create(TileType tileType,int x = 0, int y = 0)
+        private Tile Create(TileType tileType, int x = 0, int y = 0)
         {
             switch (tileType)
             {
-                case TileType.Barrier:
-                    Obstacle barrier = new Obstacle(x, y, tileType, 'X');
-                    map[x, y] = barrier;
-                    break;
-                case TileType.Empty:
-                    EmptyTile tile = new EmptyTile(x, y, tileType, '.');
-                    map[x, y] = tile;
-                    break;
                 case TileType.Hero:
-                    int HeroX = rnd.Next(0, mapwidth);
-                    int HeroY = rnd.Next(0, mapheight);
-
-                    while( map[HeroX,HeroY].GetType() != typeof(EmptyTile))
+                    int HeroX = rnd.Next(0, mapwidth - 1);
+                    int HeroY = rnd.Next(0, mapheight - 1);
+                    while (map[HeroX, HeroY].GetType() != typeof(EmptyTile))
                     {
-                         HeroX = rnd.Next(0, mapwidth);
-                         HeroY = rnd.Next(0, mapheight);
+                        HeroX = rnd.Next(0, mapwidth);
+                        HeroY = rnd.Next(0, mapheight);
                     }
+                    return new Hero(HeroX, HeroY, tileType);
 
-                    Hero newHero = new Hero(HeroX, HeroY, tileType, 'H', 10, 100, 100);
-                    Player = newHero;
-                    map[HeroX, HeroY] = newHero;
-                    break;
                 case TileType.Enemy:
                     int EnemyX = rnd.Next(0, mapwidth);
                     int EnemyY = rnd.Next(0, mapheight);
@@ -113,23 +131,32 @@ namespace Task_1
                         EnemyX = rnd.Next(0, mapwidth);
                         EnemyY = rnd.Next(0, mapheight);
                     }
-                    Goblin newEnemy = new Goblin(EnemyX, EnemyY, tileType, 'G', 10, 100, 100);
-                    enemies.Add(newEnemy);
-                    map[EnemyX, EnemyY] = newEnemy;
-                    break;
+                    return new Goblin(EnemyX, EnemyY, tileType);
+                default:
+                    return null;
             }
         }
 
         public void UpdateVision()
         {
-            foreach(Enemy E in enemies)
+            foreach (Enemy E in enemies)
             {
-                E.tilevision.Clear();
+                //  E.Vision.Clear();
+                E.tilevision[0] = map[E.getX, E.getY - 1];
+                E.tilevision[1] = map[E.getX, E.getY + 1];
+                E.tilevision[2] = map[E.getX + 1, E.getY];
+                E.tilevision[3] = map[E.getX - 1, E.getY];
             }
+            //Player.Vision.Clear();
+            Player.tilevision[0] = map[Player.getX, Player.getY - 1];
+            Player.tilevision[1] = map[Player.getX, Player.getY + 1];
+            Player.tilevision[2] = map[Player.getX + 1, Player.getY];
+            Player.tilevision[3] = map[Player.getX - 1, Player.getY];
+        }
 
-          
+        public void Drawmap()
+        {
 
         }
-    
     }
 }

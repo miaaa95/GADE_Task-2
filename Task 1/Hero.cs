@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Task_1
 {
-    class Hero: Character
+    class Hero : Character
     {
-        public Hero(int x, int y,TileType tile_type, char symbol, int dmg, int HeroHP, int MaxHeroHP) :base(x, y, tile_type, symbol, dmg, HeroHP, MaxHeroHP)
+        public Hero(int x, int y, TileType tile_type) : base(x, y, tile_type, 'H', 2, 10, 10)
         {
 
         }
@@ -18,7 +18,7 @@ namespace Task_1
             switch (charactermove)
             {
                 case movementEnum.Right:
-                        if(tilevision[2].GetType() == typeof(EmptyTile))
+                    if (tilevision[2].GetType() == typeof(EmptyTile))
                     {
                         valid = true;
                         break;
@@ -48,8 +48,8 @@ namespace Task_1
             }
             return valid;
         }
-        
-        public override movementEnum ReturnMove( movementEnum move = movementEnum.NoMovement)
+
+        public override movementEnum ReturnMove(movementEnum move = movementEnum.NoMovement)
         {
             if (checkvalidmove(move))
             {
@@ -60,7 +60,8 @@ namespace Task_1
 
         public override string ToString()
         {
-            return "Player Stats:" + '\n' + "HP:" + HP + "/Max HP: "+ MaxHP+ '\n' + "Damage:" + Damage + '\n' + "[" + X + "," + Y + "]";
+            return "Player Stats:" + '\n' + "HP:" + HP + "/Max HP: " + MaxHP + '\n' + "Damage:" + Damage + '\n' + "[" + X + "," + Y + "]";
         }
     }
 }
+

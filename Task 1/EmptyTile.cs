@@ -9,7 +9,7 @@ namespace Task_1
     class EmptyTile : Tile
     {
         //constructor for empty tile also inherites the tile constructor
-        public EmptyTile(int x, int y, TileType tile_type, char symbol) : base(x, y, tile_type, symbol)
+        public EmptyTile(int x, int y, TileType tile_type) : base(x, y, tile_type, '.')
         {
 
         }
