@@ -36,7 +36,7 @@ namespace Task_1
         private void button1_Click(object sender, EventArgs e)
         {
             game.MovePlayer(movementEnum.Up);
-            game.GetMap.updatemap();
+            game.GetMap.UpdateGame();
             lblMap.Text = game.ToString();
             rchTxtStats.Text = game.GetMap.GetPlayer.ToString();
         }
@@ -44,7 +44,7 @@ namespace Task_1
         private void bttnDown_Click(object sender, EventArgs e)
         {
             game.MovePlayer(movementEnum.Down);
-            game.GetMap.updatemap();
+            game.GetMap.UpdateGame();
             lblMap.Text = game.ToString();
             rchTxtStats.Text = game.GetMap.GetPlayer.ToString();
         }
@@ -52,7 +52,7 @@ namespace Task_1
         private void bttnRight_Click(object sender, EventArgs e)
         {
             game.MovePlayer(movementEnum.Right);
-            game.GetMap.updatemap();
+            game.GetMap.UpdateGame();
             lblMap.Text = game.ToString();
             rchTxtStats.Text = game.GetMap.GetPlayer.ToString();
         }
@@ -60,7 +60,7 @@ namespace Task_1
         private void bttnLeft_Click(object sender, EventArgs e)
         {
             game.MovePlayer(movementEnum.Left);
-            game.GetMap.updatemap();
+            game.GetMap.UpdateGame();
             lblMap.Text = game.ToString();
             rchTxtStats.Text = game.GetMap.GetPlayer.ToString();
         }

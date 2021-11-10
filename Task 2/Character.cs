@@ -124,9 +124,10 @@ namespace Task_1
         //}
 
         // alternative for now
-        public void Pickup_Gold(Gold G)
+        public void Pickup(Item i)
         {
-        Purse = Purse + G.Getamount;  
+        Gold gold = (Gold)i;
+        Purse = Purse + gold.Getamount;  
         }
 
         public abstract movementEnum ReturnMove(movementEnum m);

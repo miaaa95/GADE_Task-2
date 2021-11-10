@@ -80,7 +80,7 @@ namespace Task_1
         }
 
         
-        public void updatemap()
+        public void UpdateGame()
         {
             generate_map();
             map[Player.getX, Player.getY] = Player;
@@ -89,11 +89,11 @@ namespace Task_1
                 map[enemies[i].getX, enemies[i].getY] = enemies[i];
             }
 
+            Addgold();
             for (int i = 0; i < items.Length; i++)
             {
                 map[items[i].getX, items[i].getY] = items[i];
             }
-            
             UpdateVision();
         }
          void generate_map()
@@ -128,8 +128,7 @@ namespace Task_1
             {
                 if(map[Player.getX, Player.getY] == map[items[i].getX, items[i].getY])
                 {
-
-                    GetItemAtPosition(Player.getX, Player.getY);
+                    Player.Pickup(GetItemAtPosition(Player.getX, Player.getY));
                 }
             }
             
