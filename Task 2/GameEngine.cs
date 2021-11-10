@@ -16,7 +16,6 @@ namespace Task_1
             set { game_map = value; }
         }
         
-       
        public  GameEngine()
         {
             game_map = new Map(10, 10, 15, 15, 3,2);
@@ -115,12 +114,9 @@ namespace Task_1
             
         }
 
-        
-
         public override string ToString()
         {
            return game_map.DrawMap();
         }
-
     }
 }
