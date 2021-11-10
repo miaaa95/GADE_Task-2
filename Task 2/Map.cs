@@ -143,21 +143,26 @@ namespace Task_1
             }
             
         }
+        
+        //Q3.2 method looks in Items array if something exists at the given coordinates
         public Item GetItemAtPosition(int x, int y)
         {
+            //set item to null in array
             Item output = null;
             for (int i = 0; i < items.Length; i++)
             {
                 if(x == items[i].getX && y == items[i].getY && items[i].GetTileType == TileType.Gold)
                 {
-                     output = items[i];
+                    output = items[i];
                     items[i] = null;
                     items = items.Where(i => i != null).ToArray();
                     
                 }
             }
+            //returns item if it exists else if item doesnt exist, returns null
             return output;
         }
+        
         private Tile Create(TileType tileType,int x = 0, int y = 0)
         {
 
