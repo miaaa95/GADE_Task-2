@@ -175,7 +175,9 @@ namespace Task_1
                         EnemyX = rnd.Next(0, mapwidth);
                         EnemyY = rnd.Next(0, mapheight);
                     }
-                    if(determine_enemy == 0)
+                    //return new Mage(EnemyX, EnemyY, tileType);
+                    //return new Mage(EnemyX, EnemyY, tileType);
+                    if (determine_enemy == 0)
                     {
                         return new Goblin(EnemyX, EnemyY, tileType);
                     }
@@ -183,7 +185,7 @@ namespace Task_1
                     {
                         return new Mage(EnemyX, EnemyY, tileType);
                     }
-                    
+
 
                 case TileType.Gold:
                     int ItemX = rnd.Next(0, mapwidth);

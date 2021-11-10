@@ -18,28 +18,28 @@ namespace Task_1
             switch (charactermove)
             {
                 case movementEnum.Right:
-                        if(tilevision[2].GetType() == typeof(EmptyTile) || tilevision[2].GetType() == typeof(Gold))
+                        if(tilevision[2].GetType() == typeof(EmptyTile) || tilevision[2].GetType() == typeof(Item) ||  tilevision[2].GetType() == typeof(Gold))
                     {
                         valid = true;
                         break;
                     }
                     break;
                 case movementEnum.Left:
-                    if (tilevision[3].GetType() == typeof(EmptyTile) || tilevision[3].GetType() == typeof(Gold))
+                    if (tilevision[3].GetType() == typeof(EmptyTile) || tilevision[3].GetType() == typeof(Item) || tilevision[3].GetType() == typeof(Gold))
                     {
                         valid = true;
                         break;
                     }
                     break;
                 case movementEnum.Down:
-                    if (tilevision[1].GetType() == typeof(EmptyTile) || tilevision[1].GetType() == typeof(Gold))
+                    if (tilevision[1].GetType() == typeof(EmptyTile) || tilevision[1].GetType() == typeof(Item) || tilevision[1].GetType() == typeof(Gold))
                     {
                         valid = true;
                         break;
                     }
                     break;
                 case movementEnum.Up:
-                    if (tilevision[0].GetType() == typeof(EmptyTile) || tilevision[0].GetType() == typeof(Gold))
+                    if (tilevision[0].GetType() == typeof(EmptyTile) || tilevision[0].GetType() == typeof(Item) || tilevision[0].GetType() == typeof(Gold))
                     {
                         valid = true;
                         break;

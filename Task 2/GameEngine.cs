@@ -16,7 +16,7 @@ namespace Task_1
        
        public  GameEngine()
         {
-            game_map = new Map(10, 10, 15, 15, 6,5);
+            game_map = new Map(10, 10, 15, 15, 5,2);
         }
 
         public void MovePlayer(movementEnum movement)
@@ -40,6 +40,14 @@ namespace Task_1
                     break;
             }
            
+        }
+
+        public void MoveEnemies(movementEnum movement)
+        {
+            for (int i = 0; i < game_map.GetEnemies.Length; i++)
+            {
+                game_map.GetEnemies[i].Move(game_map.GetEnemies[i].ReturnMove(movement));
+            }
         }
 
         public string PlayerAttack(int Enemy)
