@@ -8,7 +8,7 @@ namespace Task_1
     {
         protected Random rnd = new Random();
 
-        public  Enemy(int x, int y,TileType tile_type, char symbol, int dmg, int EnemyHP,int MaxEnemyHP) : base(x, y, tile_type, symbol,dmg, EnemyHP, MaxEnemyHP)
+        public  Enemy(int x, int y,TileType tile_type, char symbol, int dmg, int EnemyHP,int MaxEnemyHP) : base(x, y, tile_type, symbol,dmg, EnemyHP, MaxEnemyHP,0)
         {
             Damage = dmg;
             MaxHP = MaxEnemyHP;

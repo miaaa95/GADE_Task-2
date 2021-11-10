@@ -88,38 +88,43 @@ namespace Task_1
             {
                 map[enemies[i].getX, enemies[i].getY] = enemies[i];
             }
+            for (int i = 0; i < items.Length; i++)
+            {
+                map[items[i].getX, items[i].getY] = items[i];
+            }
             UpdateVision();
         }
          void generate_map()
         {
-            create_tiles();
-            create_borders();
-        }
-        private  void create_borders()
-        {
+            //creates the empty tiles "."
             for (int y = 0; y < map.GetLength(1); y++)
             {
-                for (int x = 0;x < map.GetLength(0);x++)
+                for (int x = 0; x < map.GetLength(0); x++)
+                {
+                    map[x, y] = new EmptyTile(x, y, TileType.Empty);
+                }
+            }
+
+            // creates the borders "X"
+            for (int y = 0; y < map.GetLength(1); y++)
+            {
+                for (int x = 0; x < map.GetLength(0); x++)
                 {
                     if ((y == 0 || y == map.GetLength(1) - 1) || x == 0 || (x == map.GetLength(0) - 1))
                     {
-                        map[x,y] = new Obstacle(x, y, TileType.Barrier);
+                        map[x, y] = new Obstacle(x, y, TileType.Barrier);
                     }
                 }
             }
         }
+      
 
-        private void create_tiles()
+       
+
+        public Item GetItemAtPosition(int x, int y)
         {
-            for (int y = 0;y < map.GetLength(1);y++)
-            {
-                for (int x = 0; x < map.GetLength(0);x++)
-                {
-                    map[x,y] = new EmptyTile(x,y, TileType.Empty);
-                }
-            }
+
         }
-        
        private Tile Create(TileType tileType,int x = 0, int y = 0)
         {
 

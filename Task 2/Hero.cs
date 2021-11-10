@@ -6,7 +6,7 @@ namespace Task_1
 {
     class Hero: Character
     {
-        public Hero(int x, int y,TileType tile_type) :base(x, y, tile_type, 'H', 10, 10, 2)
+        public Hero(int x, int y,TileType tile_type) :base(x, y, tile_type, 'H', 10, 10, 2,0)
         {
 
         }

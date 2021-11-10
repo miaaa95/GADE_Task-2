@@ -12,6 +12,7 @@ namespace Task_1
         protected int HP;
         protected int MaxHP;
         protected int Damage;
+        protected int Purse;
         public Tile [] tilevision = new Tile[4];
 
         public int gethp
@@ -26,33 +27,25 @@ namespace Task_1
             set { MaxHP = value; }
         }
 
-
-
         public int getdamage
         {
             get { return Damage; }
             set { Damage = value; }
         }
 
-        //public List <Tile> Vision
-        //{
-        //    get { return tilevision; }
-        //    set { tilevision = value; }
-        //}
+        public int getpurse
+        {
+            get { return Purse; }
+            set { Purse = value; }
+        }
 
-
-        //public enum indicating character movement
-       
-
-
-
-        public  Character(int x, int y, TileType tile_type, char symbol, int hp,int maxhp, int damage): base(x, y,tile_type,symbol)
+        public  Character(int x, int y, TileType tile_type, char symbol, int hp,int maxhp, int damage,int purse): base(x, y,tile_type,symbol)
         {
             Symbol = symbol;
             HP = hp;
             MaxHP = maxhp;
             Damage = damage;
-          //  tilevision = new List<Tile>();
+            Purse = purse;
         }
 
         //Q2.3 Adding in methods to define generic implementations for the character to use
@@ -116,6 +109,22 @@ namespace Task_1
                     X = X + 1;
                     break;
             }
+        }
+
+        // ask for some assistance
+        //public void Pickup(Item i)
+        //{
+        //    switch (i.GetTileType)
+        //    {
+        //        case TileType.Gold:
+        //            Pickup_Gold(i);
+        //    }
+        //}
+
+        // alternative for now
+        public void Pickup_Gold(Gold G)
+        {
+        Purse = Purse + G.Getamount;  
         }
 
         public abstract movementEnum ReturnMove(movementEnum m);
