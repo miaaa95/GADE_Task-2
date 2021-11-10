@@ -58,8 +58,8 @@ namespace Task_1
             if (EnemyInRange)
             {
                 game_map.GetPlayer.attack(game_map.GetEnemies[Enemy]);
-                return "You did attack"+game_map.GetPlayer.getdamage+" damage to a "+game_map.GetEnemies[Enemy].GetTileType
-                +"they now have" + game_map.GetEnemies[Enemy].gethp + "HP";
+                return "You did attack "+game_map.GetPlayer.getdamage+" damage to a "+game_map.GetEnemies[Enemy].GetType().Name
+                +" they now have " + game_map.GetEnemies[Enemy].gethp + " HP";
             }
             else
             {

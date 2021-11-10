@@ -53,7 +53,11 @@ namespace Task_1
         public virtual void attack(Character Target)
         {
             //Decreases health of attacking character's damage
-            Target.HP = Target.HP - Damage;
+            if (checkrange(Target))
+            {
+                Target.HP -= Damage;
+            }
+            
         }
 
         //Public bool called "IsDead"

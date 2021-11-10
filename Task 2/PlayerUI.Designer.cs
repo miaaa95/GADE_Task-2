@@ -36,10 +36,10 @@ namespace Task_1
             this.grpBxStats = new System.Windows.Forms.GroupBox();
             this.rchTxtStats = new System.Windows.Forms.RichTextBox();
             this.grpBxAttack = new System.Windows.Forms.GroupBox();
+            this.EnemycomboBox = new System.Windows.Forms.ComboBox();
             this.bttnAttack = new System.Windows.Forms.Button();
             this.rchtTxtBxLog = new System.Windows.Forms.RichTextBox();
             this.rchTxtBxEnemyStats = new System.Windows.Forms.RichTextBox();
-            this.drpDwnEnemy = new System.Windows.Forms.DomainUpDown();
             this.lblMap = new System.Windows.Forms.Label();
             this.grpBxStats.SuspendLayout();
             this.grpBxAttack.SuspendLayout();
@@ -77,9 +77,9 @@ namespace Task_1
             // 
             this.bttnDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(160)))), ((int)(((byte)(120)))));
             this.bttnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnDown.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bttnDown.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bttnDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(60)))), ((int)(((byte)(36)))));
-            this.bttnDown.Location = new System.Drawing.Point(535, 497);
+            this.bttnDown.Location = new System.Drawing.Point(535, 502);
             this.bttnDown.Name = "bttnDown";
             this.bttnDown.Size = new System.Drawing.Size(69, 48);
             this.bttnDown.TabIndex = 2;
@@ -124,16 +124,25 @@ namespace Task_1
             // 
             // grpBxAttack
             // 
+            this.grpBxAttack.Controls.Add(this.EnemycomboBox);
             this.grpBxAttack.Controls.Add(this.bttnAttack);
             this.grpBxAttack.Controls.Add(this.rchtTxtBxLog);
             this.grpBxAttack.Controls.Add(this.rchTxtBxEnemyStats);
-            this.grpBxAttack.Controls.Add(this.drpDwnEnemy);
             this.grpBxAttack.Location = new System.Drawing.Point(6, 114);
             this.grpBxAttack.Name = "grpBxAttack";
             this.grpBxAttack.Size = new System.Drawing.Size(312, 246);
             this.grpBxAttack.TabIndex = 0;
             this.grpBxAttack.TabStop = false;
             this.grpBxAttack.Text = "Attack";
+            // 
+            // EnemycomboBox
+            // 
+            this.EnemycomboBox.FormattingEnabled = true;
+            this.EnemycomboBox.Location = new System.Drawing.Point(6, 26);
+            this.EnemycomboBox.Name = "EnemycomboBox";
+            this.EnemycomboBox.Size = new System.Drawing.Size(300, 28);
+            this.EnemycomboBox.TabIndex = 5;
+            this.EnemycomboBox.Text = "--Select Enemy--";
             // 
             // bttnAttack
             // 
@@ -146,6 +155,7 @@ namespace Task_1
             this.bttnAttack.TabIndex = 4;
             this.bttnAttack.Text = "ATTACK";
             this.bttnAttack.UseVisualStyleBackColor = false;
+            this.bttnAttack.Click += new System.EventHandler(this.bttnAttack_Click);
             // 
             // rchtTxtBxLog
             // 
@@ -165,15 +175,6 @@ namespace Task_1
             this.rchTxtBxEnemyStats.TabIndex = 2;
             this.rchTxtBxEnemyStats.Text = "";
             // 
-            // drpDwnEnemy
-            // 
-            this.drpDwnEnemy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
-            this.drpDwnEnemy.Location = new System.Drawing.Point(6, 26);
-            this.drpDwnEnemy.Name = "drpDwnEnemy";
-            this.drpDwnEnemy.Size = new System.Drawing.Size(296, 27);
-            this.drpDwnEnemy.TabIndex = 1;
-            this.drpDwnEnemy.Text = "Goblin";
-            // 
             // lblMap
             // 
             this.lblMap.AutoSize = true;
@@ -190,7 +191,7 @@ namespace Task_1
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Task_1.Properties.Resources.Background2;
-            this.ClientSize = new System.Drawing.Size(992, 548);
+            this.ClientSize = new System.Drawing.Size(774, 562);
             this.Controls.Add(this.lblMap);
             this.Controls.Add(this.grpBxStats);
             this.Controls.Add(this.bttnLeft);
@@ -219,7 +220,7 @@ namespace Task_1
         private System.Windows.Forms.Button bttnAttack;
         private System.Windows.Forms.RichTextBox rchtTxtBxLog;
         private System.Windows.Forms.RichTextBox rchTxtBxEnemyStats;
-        private System.Windows.Forms.DomainUpDown drpDwnEnemy;
         private System.Windows.Forms.Label lblMap;
+        private System.Windows.Forms.ComboBox EnemycomboBox;
     }
 }

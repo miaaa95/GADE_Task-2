@@ -17,7 +17,7 @@ namespace Task_1
 
         public override string ToString()
         {
-            string output = GetType().Name+'\n'+ "at["+ X + Y+"] \n"+ HP+" HP \n"+"{"+ Damage+"}";
+            string output = GetType().Name+'\n'+ " at["+ X +","+ Y+"]  \n "+ HP+" HP \n"+"{"+ Damage+"}";
             return output;
         }
     }

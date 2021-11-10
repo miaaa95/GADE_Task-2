@@ -26,11 +26,22 @@ namespace Task_1
         {
             lblMap.Text = game.ToString();
             rchTxtStats.Text = game.GetMap.GetPlayer.ToString();
+            fillEnemyBox();
+            //EnemycomboBox.Text = game.GetMap.GetEnemies[0];
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void fillEnemyBox()
+        {
+            EnemycomboBox.Items.Clear();
+            for (int i = 0; i < game.GetMap.GetEnemies.Length; i++)
+            {
+                EnemycomboBox.Items.Add(game.GetMap.GetEnemies[i]);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,6 +74,13 @@ namespace Task_1
             game.GetMap.UpdateGame();
             lblMap.Text = game.ToString();
             rchTxtStats.Text = game.GetMap.GetPlayer.ToString();
+        }
+
+        private void bttnAttack_Click(object sender, EventArgs e)
+        {
+            rchtTxtBxLog.Text = game.PlayerAttack(EnemycomboBox.SelectedIndex);
+            fillEnemyBox();
+
         }
     }
 }

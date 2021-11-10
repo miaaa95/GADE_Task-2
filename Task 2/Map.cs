@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Task_1
 {
@@ -28,7 +30,7 @@ namespace Task_1
             set { enemies = value; }
         }
 
-        private Item [] items;
+        public Item [] items;
         public  Item [] GetItems
         {
             get { return items; }
@@ -138,10 +140,12 @@ namespace Task_1
             Item output = null;
             for (int i = 0; i < items.Length; i++)
             {
-                if(x == items[i].getX && y == items[i].getY)
+                if(x == items[i].getX && y == items[i].getY && items[i].GetTileType == TileType.Gold)
                 {
                      output = items[i];
                     items[i] = null;
+                    items = items.Where(i => i != null).ToArray();
+                    
                 }
             }
             return output;
