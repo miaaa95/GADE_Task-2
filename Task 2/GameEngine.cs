@@ -51,7 +51,7 @@ namespace Task_1
            
         }
 
-        
+        //Q3.3 All enemies move only when the player moves
         public void MoveEnemies(movementEnum movement)
         {
             for (int i = 0; i < game_map.GetEnemies.Length; i++)
@@ -76,6 +76,7 @@ namespace Task_1
              
             if (EnemyInRange)
             {
+                //enemy stats update after every attack or movement
                 game_map.GetPlayer.attack(game_map.GetEnemies[Enemy]);
                 return "You did attack "+game_map.GetPlayer.getdamage+" damage to a "+game_map.GetEnemies[Enemy].GetType().Name
                 +" they now have " + game_map.GetEnemies[Enemy].gethp + " HP";
@@ -86,6 +87,8 @@ namespace Task_1
             }
         }
 
+        //Q3.3 Enemies attack after player moves
+        //Enemies attack when player attacks
         public void EnemyAttack()
         {
             for (int i = 0; i < game_map.GetEnemies.Length; i++)
