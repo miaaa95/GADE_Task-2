@@ -8,6 +8,7 @@ namespace Task_1
 {
     class Map
     {
+        //Q4.1 2D map arrays
         private Tile[,] map;
         public Tile[,] GetMaps
         {
@@ -22,14 +23,15 @@ namespace Task_1
             set { Player = value; }
         }
 
+        //enemy array
         private Enemy []  enemies;
-
         public Enemy[] GetEnemies
         {
             get { return enemies; }
             set { enemies = value; }
         }
 
+        //Q3.1 items array that stores items that exist on map
         public Item [] items;
         public  Item [] GetItems
         {
@@ -44,6 +46,7 @@ namespace Task_1
             set { mapwidth = value; }
         }
 
+        //private variable of map height
         private int mapheight;
 
         public int getmapheight
@@ -51,8 +54,10 @@ namespace Task_1
             get { return mapheight; }
             set { mapheight = value; }
         }
+        
         private Random rnd = new Random();
 
+        //Deciding the map size through random rolls
         public Map(int min_width,int max_width, int min_height, int max_height,int num_enemies,int num_items)
         {
             mapwidth = rnd.Next(min_width, max_width+1);
@@ -68,6 +73,7 @@ namespace Task_1
             Player = (Hero)Create(TileType.Hero);
             map[Player.getX, Player.getY] = Player;
 
+            //Q3.1
             for (int i = 0; i < enemies.Length; i++)
             {
                 enemies[i] = (Enemy)Create(TileType.Enemy);
@@ -137,21 +143,26 @@ namespace Task_1
             }
             
         }
+        
+        //Q3.2 method looks in Items array if something exists at the given coordinates
         public Item GetItemAtPosition(int x, int y)
         {
+            //set item to null in array
             Item output = null;
             for (int i = 0; i < items.Length; i++)
             {
                 if(x == items[i].getX && y == items[i].getY && items[i].GetTileType == TileType.Gold)
                 {
-                     output = items[i];
+                    output = items[i];
                     items[i] = null;
                     items = items.Where(i => i != null).ToArray();
                     
                 }
             }
+            //returns item if it exists else if item doesnt exist, returns null
             return output;
         }
+        
         private Tile Create(TileType tileType,int x = 0, int y = 0)
         {
 

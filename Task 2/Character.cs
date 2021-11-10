@@ -15,31 +15,35 @@ namespace Task_1
         protected int Purse;
         public Tile [] tilevision = new Tile[4];
 
+        //public accessor that gets the health
         public int gethp
         {
             get { return HP;}
             set { HP = value; }
         }
 
+        //public accessor that gets the maximum health
         public int getmaxHp
         {
             get { return MaxHP; }
             set { MaxHP = value; }
         }
 
+         //public accessor that gets the damage amount
         public int getdamage
         {
             get { return Damage; }
             set { Damage = value; }
         }
 
+         //public accessor that gets the purse for the gold
         public int getpurse
         {
             get { return Purse; }
             set { Purse = value; }
         }
 
-        public  Character(int x, int y, TileType tile_type, char symbol, int hp,int maxhp, int damage,int purse): base(x, y,tile_type,symbol)
+        public Character(int x, int y, TileType tile_type, char symbol, int hp,int maxhp, int damage,int purse): base(x, y,tile_type,symbol)
         {
             Symbol = symbol;
             HP = hp;
@@ -63,7 +67,6 @@ namespace Task_1
         //Public bool called "IsDead"
         public bool isdead()
         {
-            
             if(HP <= 0)
             {
                 return true;
@@ -117,17 +120,7 @@ namespace Task_1
             }
         }
 
-        // ask for some assistance
-        //public void Pickup(Item i)
-        //{
-        //    switch (i.GetTileType)
-        //    {
-        //        case TileType.Gold:
-        //            Pickup_Gold(i);
-        //    }
-        //}
-
-        // alternative for now
+        //Q3.2 check item passed and if gold, add to character's treasure collection
         public void Pickup(Item i)
         {
         Gold gold = (Gold)i;
@@ -137,11 +130,5 @@ namespace Task_1
         public abstract movementEnum ReturnMove(movementEnum m);
 
         public abstract override string ToString();
-
-
-
-
-
-
     }
 }
