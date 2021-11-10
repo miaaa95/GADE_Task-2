@@ -8,10 +8,9 @@ namespace Task_1
     //Exists to indicate empty tile space
     class EmptyTile : Tile
     {
-        //constructor for empty tile also inherites the tile constructor
         public EmptyTile(int x, int y, TileType tile_type) : base(x, y, tile_type,'.')
         {
-
+            //constructor for empty tile also inherites the tile constructor
         }
     }
 }
