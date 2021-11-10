@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using System.IO;
 
 namespace Task_1
 {
@@ -112,6 +115,72 @@ namespace Task_1
                 }
             }
             
+        }
+
+        //4.1 method used for the save function
+        public static void Save(string maps, string hero)
+        {
+            var savemap = Directory.GetCurrentDirectory();
+            var filemap = Path.Combine(savemap, "saved_map_game.dat");
+            try
+            {
+                FileStream fileStream = new FileStream(filemap, FileMode.Create, FileAccess.Write);
+                if (fileStream.CanWrite)
+                {
+                    byte[] buffer = Encoding.ASCII.GetBytes(maps);
+                    fileStream.Write(buffer, 0, buffer.Length);
+                }
+                fileStream.Flush();
+                fileStream.Close();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            var savehero = Directory.GetCurrentDirectory();
+            var filehero = Path.Combine(savehero, "saved_hero_game.dat");
+            try
+            {
+                FileStream fileStream = new FileStream(filemap, FileMode.Create, FileAccess.Write);
+                if (fileStream.CanWrite)
+                {
+                    byte[] buffer = Encoding.ASCII.GetBytes(hero);
+                    fileStream.Write(buffer, 0, buffer.Length);
+                }
+                fileStream.Flush();
+                fileStream.Close();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+        //4.2 method used for load funcrion
+        public static string Load(string strFile)
+        {
+
+            var dirload = Directory.GetCurrentDirectory();
+            var fileload = Path.Combine(dirload, strFile);
+            string Text = String.Empty;
+
+            try
+            {
+                FileStream fileStream = new FileStream(fileload, FileMode.Open, FileAccess.Read);
+                byte[] buffer = new byte[1024];
+                int bytesread = fileStream.Read(buffer, 0, buffer.Length);
+
+                Text = Encoding.ASCII.GetString(buffer, 0, bytesread);
+
+                fileStream.Flush();
+                fileStream.Close();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+            return Text;
+
         }
 
         public override string ToString()
