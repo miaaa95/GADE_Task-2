@@ -39,7 +39,7 @@ namespace Task_1
             set { Purse = value; }
         }
 
-        public  Character(int x, int y, TileType tile_type, char symbol, int hp,int maxhp, int damage,int purse): base(x, y,tile_type,symbol)
+        public Character(int x, int y, TileType tile_type, char symbol, int hp,int maxhp, int damage,int purse): base(x, y,tile_type,symbol)
         {
             Symbol = symbol;
             HP = hp;
@@ -63,7 +63,6 @@ namespace Task_1
         //Public bool called "IsDead"
         public bool isdead()
         {
-            
             if(HP <= 0)
             {
                 return true;
@@ -117,17 +116,7 @@ namespace Task_1
             }
         }
 
-        // ask for some assistance
-        //public void Pickup(Item i)
-        //{
-        //    switch (i.GetTileType)
-        //    {
-        //        case TileType.Gold:
-        //            Pickup_Gold(i);
-        //    }
-        //}
-
-        // alternative for now
+        //Q3.2 check item passed and if gold, add to character's treasure collection
         public void Pickup(Item i)
         {
         Gold gold = (Gold)i;
