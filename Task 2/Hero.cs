@@ -61,6 +61,7 @@ namespace Task_1
 
         public override string ToString()
         {
+            //Q3.2 Display the gold amount in the Stats display section
             return "Player Stats:" + '\n' + "HP: " + HP + "/ "+ MaxHP+ '\n' + "Damage: " + Damage + '\n' + "[" + X + "," + Y + "] "+ getpurse +" Gold";
         }
     }
