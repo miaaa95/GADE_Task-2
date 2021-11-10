@@ -55,7 +55,7 @@ namespace Task_1
             //Decreases health of attacking character's damage
             if (checkrange(Target))
             {
-                Target.HP -= Damage;
+                Target.HP = Target.HP - Damage;
             }
             
         }

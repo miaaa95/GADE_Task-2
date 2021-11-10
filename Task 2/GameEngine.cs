@@ -94,13 +94,7 @@ namespace Task_1
                         break;
 
                     case 'M':
-                        foreach (Tile T in game_map.GetEnemies[i].tilevision)
-                        {
-                            if (T.getX == game_map.GetPlayer.getX && (T.getY == game_map.GetPlayer.getY))
-                            {
                                 game_map.GetEnemies[i].attack(game_map.GetPlayer);
-                            }
-                        }
                         break;
                 }
             }
