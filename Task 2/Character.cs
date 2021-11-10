@@ -15,24 +15,28 @@ namespace Task_1
         protected int Purse;
         public Tile [] tilevision = new Tile[4];
 
+        //public accessor that gets the health
         public int gethp
         {
             get { return HP;}
             set { HP = value; }
         }
 
+        //public accessor that gets the maximum health
         public int getmaxHp
         {
             get { return MaxHP; }
             set { MaxHP = value; }
         }
 
+         //public accessor that gets the damage amount
         public int getdamage
         {
             get { return Damage; }
             set { Damage = value; }
         }
 
+         //public accessor that gets the purse for the gold
         public int getpurse
         {
             get { return Purse; }
@@ -126,11 +130,5 @@ namespace Task_1
         public abstract movementEnum ReturnMove(movementEnum m);
 
         public abstract override string ToString();
-
-
-
-
-
-
     }
 }
