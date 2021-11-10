@@ -75,6 +75,29 @@ namespace Task_1
             }
         }
 
+        public string EnemyAttack()
+        {
+            bool EnemyInRange = false;
+            
+            for (int i = 0; i < game_map.GetEnemies.Length; i++)
+            {
+                bool HeroInRange = false;
+                switch (game_map.GetEnemies[i].getsymbol)
+                {
+                    case 'G':
+                        foreach (Tile T in game_map.GetEnemies[i].tilevision)
+                        {
+                            if (T.getX == game_map.GetPlayer.getX && (T.getY == game_map.GetPlayer.getY))
+                            {
+                               // game_map.GetPlayer.attack(game_map.GetEnemies[Enemy]);
+                            }
+                        }
+                        break;
+                }
+            }
+            return null;
+        }
+
         
 
         public override string ToString()
