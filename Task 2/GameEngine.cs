@@ -22,7 +22,7 @@ namespace Task_1
             game_map = new Map(10, 10, 15, 15, 3,2);
         }
 
-        //Allows player to move a space if the move is valid
+        //Q3.3 Allows player to move a space if the move is valid
         //Players move one unit on the grid
         public void MovePlayer(movementEnum movement)
         {
