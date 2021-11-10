@@ -47,6 +47,7 @@ namespace Task_1
         private void button1_Click(object sender, EventArgs e)
         {
             game.MovePlayer(movementEnum.Up);
+
             game.GetMap.UpdateGame();
             game.MoveEnemies(movementEnum.NoMovement);
             fillEnemyBox();
@@ -58,6 +59,7 @@ namespace Task_1
         private void bttnDown_Click(object sender, EventArgs e)
         {
             game.MovePlayer(movementEnum.Down);
+            game.EnemyAttack();
             game.GetMap.UpdateGame();
             game.MoveEnemies(movementEnum.NoMovement);
             fillEnemyBox();
@@ -69,6 +71,7 @@ namespace Task_1
         private void bttnRight_Click(object sender, EventArgs e)
         {
             game.MovePlayer(movementEnum.Right);
+            game.EnemyAttack();
             game.GetMap.UpdateGame();
             game.MoveEnemies(movementEnum.NoMovement);
             fillEnemyBox();
@@ -80,6 +83,7 @@ namespace Task_1
         private void bttnLeft_Click(object sender, EventArgs e)
         {
             game.MovePlayer(movementEnum.Left);
+            game.EnemyAttack();
             game.GetMap.UpdateGame();
             game.MoveEnemies(movementEnum.NoMovement);
             fillEnemyBox();

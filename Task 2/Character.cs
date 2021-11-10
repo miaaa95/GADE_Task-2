@@ -75,7 +75,7 @@ namespace Task_1
         //Public virtual bool
         public virtual bool checkrange(Character Target)
         {
-            if (DistanceTo(Target) > 1)
+            if (DistanceTo(Target) > 1 || DistanceTo(Target) == 0)
             {
                 return false;
             }

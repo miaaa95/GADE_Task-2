@@ -81,7 +81,10 @@ namespace Task_1
             UpdateVision();
         }
 
-        
+        public void PlaceHero()
+        {
+            map[Player.getX, Player.getY] = Player;
+        }
         public void UpdateGame()
         {
             generate_map();
@@ -90,7 +93,6 @@ namespace Task_1
             {
                 map[enemies[i].getX, enemies[i].getY] = enemies[i];
             }
-
             Addgold();
             for (int i = 0; i < items.Length; i++)
             {
@@ -175,16 +177,15 @@ namespace Task_1
                         EnemyX = rnd.Next(0, mapwidth);
                         EnemyY = rnd.Next(0, mapheight);
                     }
-                    //return new Mage(EnemyX, EnemyY, tileType);
-                    //return new Mage(EnemyX, EnemyY, tileType);
-                    if (determine_enemy == 0)
-                    {
-                        return new Goblin(EnemyX, EnemyY, tileType);
-                    }
-                    else
-                    {
-                        return new Mage(EnemyX, EnemyY, tileType);
-                    }
+                    return new Mage(EnemyX, EnemyY, tileType);
+                    //if (determine_enemy == 0)
+                    //{
+                    //    return new Goblin(EnemyX, EnemyY, tileType);
+                    //}
+                    //else
+                    //{
+                    //    return new Mage(EnemyX, EnemyY, tileType);
+                    //}
 
 
                 case TileType.Gold:

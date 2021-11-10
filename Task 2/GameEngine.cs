@@ -16,7 +16,7 @@ namespace Task_1
        
        public  GameEngine()
         {
-            game_map = new Map(10, 10, 15, 15, 5,2);
+            game_map = new Map(10, 10, 15, 15, 3,2);
         }
 
         public void MovePlayer(movementEnum movement)
@@ -48,6 +48,7 @@ namespace Task_1
             {
                 game_map.GetEnemies[i].Move(game_map.GetEnemies[i].ReturnMove(movement));
             }
+            EnemyAttack();
         }
 
         public string PlayerAttack(int Enemy)
@@ -75,13 +76,11 @@ namespace Task_1
             }
         }
 
-        public string EnemyAttack()
+        public void EnemyAttack()
         {
-            bool EnemyInRange = false;
-            
             for (int i = 0; i < game_map.GetEnemies.Length; i++)
             {
-                bool HeroInRange = false;
+                
                 switch (game_map.GetEnemies[i].getsymbol)
                 {
                     case 'G':
@@ -89,13 +88,23 @@ namespace Task_1
                         {
                             if (T.getX == game_map.GetPlayer.getX && (T.getY == game_map.GetPlayer.getY))
                             {
-                               // game_map.GetPlayer.attack(game_map.GetEnemies[Enemy]);
+                                game_map.GetEnemies[i].attack(game_map.GetPlayer);
+                            }
+                        }
+                        break;
+
+                    case 'M':
+                        foreach (Tile T in game_map.GetEnemies[i].tilevision)
+                        {
+                            if (T.getX == game_map.GetPlayer.getX && (T.getY == game_map.GetPlayer.getY))
+                            {
+                                game_map.GetEnemies[i].attack(game_map.GetPlayer);
                             }
                         }
                         break;
                 }
             }
-            return null;
+            
         }
 
         

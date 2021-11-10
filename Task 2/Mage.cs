@@ -18,23 +18,38 @@ namespace Task_1
             {
                 return true;
             }
+
             else if (Target.getX == X - 1 && Target.getY == Y + 1)
             {
                 return true;
             }
+
             else if (Target.getX == X + 1 && Target.getY == Y - 1)
             {
                 return true;
             }
+
             else if (Target.getX == X + 1 && Target.getY == Y + 1)
             {
                 return true;
             }
-            else if (DistanceTo(Target) == 1)
+
+            else if (Target.getX == X + 1 && Target.getY == Y)
             {
                 return true;
             }
-
+            else if (Target.getX == X - 1 && Target.getY == Y)
+            {
+                return true;
+            }
+            else if (Target.getX == X && Target.getY == Y + 1)
+            {
+                return true;
+            }
+            else if (Target.getX == X  && Target.getY == Y - 1)
+            {
+                return true;
+            }
             else
             {
                 return false;
