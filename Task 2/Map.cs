@@ -8,6 +8,7 @@ namespace Task_1
 {
     class Map
     {
+        //Q4.1 2D map arrays
         private Tile[,] map;
         public Tile[,] GetMaps
         {
@@ -22,6 +23,7 @@ namespace Task_1
             set { Player = value; }
         }
 
+        //enemy array
         private Enemy []  enemies;
 
         public Enemy[] GetEnemies
@@ -30,6 +32,7 @@ namespace Task_1
             set { enemies = value; }
         }
 
+        //items array
         public Item [] items;
         public  Item [] GetItems
         {
@@ -44,6 +47,7 @@ namespace Task_1
             set { mapwidth = value; }
         }
 
+        //private variable of map height
         private int mapheight;
 
         public int getmapheight
@@ -53,6 +57,7 @@ namespace Task_1
         }
         private Random rnd = new Random();
 
+        //Deciding the map size through random rolls
         public Map(int min_width,int max_width, int min_height, int max_height,int num_enemies,int num_items)
         {
             mapwidth = rnd.Next(min_width, max_width+1);
