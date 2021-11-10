@@ -25,14 +25,13 @@ namespace Task_1
 
         //enemy array
         private Enemy []  enemies;
-
         public Enemy[] GetEnemies
         {
             get { return enemies; }
             set { enemies = value; }
         }
 
-        //items array
+        //Q3.1 items array that stores items that exist on map
         public Item [] items;
         public  Item [] GetItems
         {
@@ -55,6 +54,7 @@ namespace Task_1
             get { return mapheight; }
             set { mapheight = value; }
         }
+        
         private Random rnd = new Random();
 
         //Deciding the map size through random rolls
@@ -73,6 +73,7 @@ namespace Task_1
             Player = (Hero)Create(TileType.Hero);
             map[Player.getX, Player.getY] = Player;
 
+            //Q3.1
             for (int i = 0; i < enemies.Length; i++)
             {
                 enemies[i] = (Enemy)Create(TileType.Enemy);
