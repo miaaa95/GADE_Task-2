@@ -6,9 +6,12 @@ namespace Task_1
 {
     class GameEngine
     {
+        //Q3.3 private map variable
         private Map game_map;
+        //public get accessor
          public Map GetMap
         {
+             //constructor that creates a map object with sensible values
             get { return game_map; }
             set { game_map = value; }
         }
@@ -19,22 +22,28 @@ namespace Task_1
             game_map = new Map(10, 10, 15, 15, 3,2);
         }
 
+        //Allows player to move a space if the move is valid
+        //Players move one unit on the grid
         public void MovePlayer(movementEnum movement)
         {
             switch (movement)
             {
+                    //move up
                 case movementEnum.Up:
                 game_map.GetPlayer.Move(game_map.GetPlayer.ReturnMove(movementEnum.Up));
                     break;
 
+                    //move down
                 case movementEnum.Down:
                     game_map.GetPlayer.Move(game_map.GetPlayer.ReturnMove(movementEnum.Down));
                     break;
 
+                    //move left
                 case movementEnum.Left:
                     game_map.GetPlayer.Move(game_map.GetPlayer.ReturnMove(movementEnum.Left));
                     break;
 
+                    //move right
                 case movementEnum.Right:
                     game_map.GetPlayer.Move(game_map.GetPlayer.ReturnMove(movementEnum.Right));
                     break;
@@ -42,6 +51,7 @@ namespace Task_1
            
         }
 
+        
         public void MoveEnemies(movementEnum movement)
         {
             for (int i = 0; i < game_map.GetEnemies.Length; i++)
