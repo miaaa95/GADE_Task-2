@@ -117,15 +117,24 @@ namespace Task_1
                 }
             }
         }
-      
 
-       
+
+
 
         public Item GetItemAtPosition(int x, int y)
         {
-
+            Item output = null;
+            for (int i = 0; i < items.Length; i++)
+            {
+                if(x == items[i].getX && y == items[i].getY)
+                {
+                     output = items[i];
+                    items[i] = null;
+                }
+            }
+            return output;
         }
-       private Tile Create(TileType tileType,int x = 0, int y = 0)
+        private Tile Create(TileType tileType,int x = 0, int y = 0)
         {
 
             switch (tileType)

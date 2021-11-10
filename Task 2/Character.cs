@@ -108,6 +108,8 @@ namespace Task_1
                 case movementEnum.Right:
                     X = X + 1;
                     break;
+                case movementEnum.NoMovement:
+                    break;
             }
         }
 

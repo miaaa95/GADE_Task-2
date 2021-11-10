@@ -60,7 +60,7 @@ namespace Task_1
 
         public override string ToString()
         {
-            return "Player Stats:" + '\n' + "HP: " + HP + "/ "+ MaxHP+ '\n' + "Damage: " + Damage + '\n' + "[" + X + "," + Y + "]";
+            return "Player Stats:" + '\n' + "HP: " + HP + "/ "+ MaxHP+ '\n' + "Damage: " + Damage + '\n' + "[" + X + "," + Y + "] "+ getpurse +" Gold";
         }
     }
 }

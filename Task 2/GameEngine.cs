@@ -19,17 +19,28 @@ namespace Task_1
             game_map = new Map(10, 10, 15, 15, 6,5);
         }
 
-        //public bool MovePlayer(movementEnum movement)
-        //{
-        //    if(game_map.GetPlayer.ReturnMove(movement) == movement)
-        //    {
-        //        game_map.Create(TileType.Empty, game_map.GetPlayer.getX, game_map.GetPlayer.getY);
-        //        game_map.GetPlayer.Move(movement);
-        //        game_map.GetMaps[game_map.GetPlayer.getX, game_map.GetPlayer.getY] = game_map.GetPlayer;
-        //        return true;
-        //    }
-        //    return false;
-        //}
+        public void MovePlayer(movementEnum movement)
+        {
+            switch (movement)
+            {
+                case movementEnum.Up:
+                game_map.GetPlayer.Move(game_map.GetPlayer.ReturnMove(movementEnum.Up));
+                    break;
+
+                case movementEnum.Down:
+                    game_map.GetPlayer.Move(game_map.GetPlayer.ReturnMove(movementEnum.Down));
+                    break;
+
+                case movementEnum.Left:
+                    game_map.GetPlayer.Move(game_map.GetPlayer.ReturnMove(movementEnum.Left));
+                    break;
+
+                case movementEnum.Right:
+                    game_map.GetPlayer.Move(game_map.GetPlayer.ReturnMove(movementEnum.Right));
+                    break;
+            }
+           
+        }
 
         public string PlayerAttack(int Enemy)
         {
