@@ -6,7 +6,7 @@ namespace Task_1
 {
     class Mage : Enemy 
     {
-        public Mage(int x, int y, TileType tile_type) : base(x, y, tile_type, 'M', 5, 5, 5)
+        public Mage(int x, int y, TileType tile_type) : base(x, y, tile_type, 'M', 1, 5, 5)
         {
 
         }

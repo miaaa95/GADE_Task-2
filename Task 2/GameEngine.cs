@@ -94,6 +94,7 @@ namespace Task_1
                         break;
 
                     case 'M':
+
                                 game_map.GetEnemies[i].attack(game_map.GetPlayer);
                         break;
                 }
